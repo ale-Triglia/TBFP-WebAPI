@@ -1,0 +1,9 @@
+﻿@page "/logout"
+@inject AppAuthenticationStateProvider AuthenticationService
+
+@code {
+    protected override async void OnInitialized()
+    {
+        await AuthenticationService.SignOut();
+    }
+}
